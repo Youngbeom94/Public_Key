@@ -33,7 +33,7 @@ def is_prime_by_miller_rabin(n, k):
         k=k-1
         return "Probably Prime"
 
-n = 72102301
+n = 7076
 # n = random_prime(100000) 
 print ("n = {}".format(n)) 
 print (is_prime_by_miller_rabin(n, 10)) 
