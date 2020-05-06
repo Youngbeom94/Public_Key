@@ -17,6 +17,12 @@ N = 12844
 A = 96316032
 T = W^(2*n) // N
 
+'''
+N = 12844
+A = 96316032
+T = W^(2*n) // N
+'''
+
 ret1 = barrett_red(A, N, T) 
 ret2 = A%N
 print ("N = {}".format(N)) 
