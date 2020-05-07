@@ -26,6 +26,7 @@ def is_prime_by_miller_rabin(n, k):
     print ("l = {}, q = {}".format(l,q))
     while k > 0:
         a = ZZ.random_element(2,n-2)
+        #a = 77
         print ("a = {}".format(a)) 
         ret = is_composite(n, q, l, a) 
         if ret == "Composite":
@@ -33,7 +34,7 @@ def is_prime_by_miller_rabin(n, k):
         k=k-1
         return "Probably Prime"
 
-n = 7076
+n = 3977
 # n = random_prime(100000) 
 print ("n = {}".format(n)) 
 print (is_prime_by_miller_rabin(n, 10)) 

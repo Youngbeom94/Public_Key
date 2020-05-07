@@ -7,7 +7,9 @@ def EEA_rec(a,b):
     return T
 
 
-a, b = ZZ.random_element(10000), ZZ.random_element(10000) 
+#a, b = ZZ.random_element(10000), ZZ.random_element(10000) 
+a = 6765
+b = 1094
 print ("(a,b) = ({},{})".format(a,b)) 
 result = EEA_rec(a,b) 
 print (result == xgcd(a,b))

@@ -1,5 +1,5 @@
 # w = 8; W = 2^w
-w = 4; W = 2^w
+w = 8; W = 2^w
 # input x, N 
 # return xR^(-1) mod N 
 def MontRed(x, r, n, nn):
@@ -24,17 +24,17 @@ def ModExp_by_MontRed(x, e, n, nn, r, phi1):
     return t
 
 # N = ZZ.random_element(W^10, W^20) 
-# N = (N << 1) + 1 # odd N 
-# t=1 
-# while True:
-#     R = W^(t) 
-#     if (gcd(R,N) == 1) and (N < R):
-#         break
-#     else:
-#         t=t+1
+N = 789
+N = (N << 1) + 1 # odd N 
+t=1 
+while True:
+    R = W^(t) 
+    if (gcd(R,N) == 1) and (N < R):
+        break
+    else:
+        t=t+1
 
-N = 11
-R = 16
+R = W^(t)
 
 print ("N = {} (given)".format(hex(N))) 
 print ("R = {}".format(hex(R)))
@@ -49,8 +49,8 @@ print ("N’ = {}".format(hex(NN)))
 print ("phi(1) = R mod N = {}".format(hex(phi1)))
 
 # x = ZZ.random_element(0, N-1) 
-x = 3
-e = 4
+x = 123
+e = 456
 # e = ZZ.random_element(0, 0x10)
 print ("x = {}".format(hex(x))) 
 print ("e = {}".format(hex(e))) 
