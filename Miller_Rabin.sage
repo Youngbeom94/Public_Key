@@ -34,8 +34,8 @@ def is_prime_by_miller_rabin(n, k):
         k=k-1
         return "Probably Prime"
 
-n = 3977
+n = (2^255) + 325610659388873400306201440571661405155
 # n = random_prime(100000) 
 print ("n = {}".format(n)) 
-print (is_prime_by_miller_rabin(n, 10)) 
+#print (is_prime_by_miller_rabin(n, 20)) 
 print (n.is_prime())
