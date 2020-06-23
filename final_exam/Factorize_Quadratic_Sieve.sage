@@ -155,14 +155,21 @@ def factorize(N, B, l):
 # Generate n-bit Random Composite N = p*q
 # Parameter Setup
 #############################################
-N = gen_composite(20)
+#N = gen_composite(20)
 
-B = ceil(L(N)^(1/sqrt(2)))
-l = ceil(L(N)^(sqrt(2)))
+#B = ceil(L(N)^(1/sqrt(2)))
+#l = ceil(L(N)^(sqrt(2)))
 
-N = 7 * 11
-B = 5
-l = 7
+'''
+N = 1261
+B = 10
+l = 9
+'''
+
+N = 221
+B = 8
+l = 8
+
 #############################################
 # Step 2. Factor N with B and l
 #############################################
