@@ -12,8 +12,8 @@ def factorize_Pollard_rho(N):
         if 1 < d < N:
             print("!!(a,b) = ",a,b)
             print("d = ",d)
-            print ("N = {} x {}\n".format(d, N/d))
             print("k = ", k)
+            print ("N = {} x {}\n".format(d, N/d))
             break
         if d == N:
             print ("Failure\n")
