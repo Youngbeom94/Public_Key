@@ -44,11 +44,11 @@ def factorize(F, N, count):
                 return "{} = {} x {}: Success\nwith J = {}".format(N,d,N/d,c)
     return "Failure"
 
-B = 2^3
+B = 11 # P범위
 P = [j for j in [2..B] if j.is_prime()]
 print ("Set P is {} (#P = {})".format(P, len(P)))
 
-bound = 2^8
+bound = 2^10
 while True:
     p = random_prime(bound-1, lbound = bound >> 1) 
     q = random_prime(bound-1, lbound = bound >> 1) 
@@ -56,6 +56,7 @@ while True:
         N=p*q 
         break
         
+N =  914387
 print (factorize(P, N, len(P) + 1))
 print ("\n")
 #print (factorize(P, N, 8))
