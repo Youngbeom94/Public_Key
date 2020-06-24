@@ -15,7 +15,7 @@ def bin_search(list, target):
     size = len(list) 
     if size < 1:
         return NO_ELEMENT
-    mid = (size-1) >> 1 
+    mid = (size-1) >> 1
     if list[mid][1] == target:
         return list[mid][0]
     if list[mid][1] < target:
@@ -54,11 +54,15 @@ def dlp_bsgs(p,g,h):
     print (power_mod(g,root,p) == h)
 
 # problem: g^x = h over GF(p) 
-p = random_prime(2^10, lbound = 2) 
-g = primitive_root(p) 
-x = ZZ.random_element(2, p) 
-h = power_mod(g, x, p)
+#g = primitive_root(p) 
+#x = ZZ.random_element(2, p) 
+#h = power_mod(g, x, p)
+p = 11251
+g = 11089
+x = 1
+h = 6320
 
 print ("[Problem] {}^x = {} over GF({})".format(g, h, p)) 
 dlp_bsgs(p, g, h)
 
+#load("DLP_BS.sage")
