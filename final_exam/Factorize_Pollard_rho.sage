@@ -7,8 +7,8 @@ def factorize_Pollard_rho(N):
     k = 0
     while True:
         a, b = f(a, N), f(f(b, N), N) 
-        print("(a,b) = ",a,b)
         d = gcd(N, a - b)
+        print("(a,b) = ",a,b, "d = ",d)
         if 1 < d < N:
             print("!!(a,b) = ",a,b)
             print("d = ",d)
@@ -26,6 +26,7 @@ while cnt > 0:
     p = random_prime(upper_bound) 
     q = random_prime(upper_bound) 
     N = p*q
+    N = 268867
     print ("p = {}, q = {}".format(p, q)) 
     print ("N =", N)
     factorize_Pollard_rho(N) 

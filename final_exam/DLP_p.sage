@@ -1,7 +1,7 @@
 reset() 
 #load("DLP_p-1.sage")
 # parameter 
-p = random_prime(2^12) 
+p = 383
 F = GF(p)
 while True:
     g = F.random_element() 
@@ -10,15 +10,11 @@ while True:
     n = g.multiplicative_order() 
     if n.is_prime() == True:
         break
+x = 110
+h = power_mod(g,x,p)
+print("h = ",h)
 
-x = ZZ.random_element(2, p)
-
-p = 4021
-g = 2160
-x = 1
-h = 2160
-# problem: g^x = h 
-h = power_mod(g,x,p) 
+problem: g^x = h 
 print ("[Problem] {}^x = {} over GF({}) : {}^{} = 1".format(g, h, p, g, n))
 
 def f(x):
@@ -32,10 +28,10 @@ def f(x):
 #-----------------------------------------------------------------------------
 cnt = 0 
 while cnt < 10:
-    #x1 = x2 = (1, 0, 0) 
-    a = ZZ.random_element(n) 
-    b = ZZ.random_element(n) 
-    x1 = x2 = (g^a*h^b, a, b) 
+    x1 = x2 = (1, 0, 0) 
+    #a = ZZ.random_element(n) 
+    #b = ZZ.random_element(n) 
+    #x1 = x2 = (g^a*h^b, a, b) 
     i=0 
     while(1):
         print (i, x1, x2) 

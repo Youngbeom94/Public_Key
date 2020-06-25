@@ -1,14 +1,15 @@
 def pollard_p_1(N, k):
     i=0 
     while i < k[0]:
-        a = ZZ.random_element(N) 
+        a = 59384740
         a1 = a 
-        print ("\na = {}".format(a)) 
-        j=2 
+        print ("\n a = {}".format(a)) 
+        j=1
         while j < k[1]:
             a = power_mod(a,j,N) 
             d = gcd(a-1,N) 
-            print (j, a, d) 
+            #print (j, a, d) 
+            print ("{}번째 a = {}, gcd = {}".format(j,a,d)) 
             if d > 1 and d < N:
                 return d, N/d, a1
             if d == N:
@@ -20,7 +21,7 @@ def pollard_p_1(N, k):
 k = (400,400) 
 bound = 2^15 
 N = random_prime(bound)*random_prime(bound) 
-N = 36147573
+N = 87010111
 print ("N = {} = {}".format(N, factor(N)))
 
 ans = pollard_p_1(N, k) 
