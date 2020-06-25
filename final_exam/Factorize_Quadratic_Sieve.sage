@@ -51,6 +51,7 @@ def showList(L):
 
 def find_smooth_integers(N, P, l):
     a = floor(sqrt(N))
+    #a = ceil(sqrt(N))
     j, L = 0, []
     L = [(a + j,f(a + j, N)) for j in [1..l]]
 
@@ -73,8 +74,10 @@ def find_smooth_integers(N, P, l):
                             pos = flag - a - 1
                             L[pos] = (L[pos][0], L[pos][1] / p)
                             flag = flag + p^ex
-                        print ("p = {}^{} : roots = {} : start = {}".format(p, ex, rts, t))
-                    showList(L)
+                        #rint ("p = {}^{} : roots = {} : start = {}".format(p, ex, rts, t))
+                        kk = N%(p^ex)
+                        print ("X^2 = {} = {} (mod {}^{}) --> X = {}: start = {}".format(N, kk, p, ex, rts, t))
+                        showList(L)
             ex = ex + 1 # for next exponent
     smooth_integers = [L[j] for j in [0..len(L)-1] if L[j][1] == 1]
     return smooth_integers
@@ -165,9 +168,10 @@ N = 1261
 B = 10
 l = 9
 '''
+#load("Factorize_Quadratic_Sieve.sage")
 
 N = 221
-B = 8
+B = 10
 l = 8
 
 #############################################

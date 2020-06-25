@@ -25,6 +25,7 @@ def bin_search(list, target):
 
 def dlp_bsgs(p,g,h):
     m = 1 + floor(sqrt(p-1)) 
+    #m = 5
     print ("m = {} = 0x{:x}".format(m, m)) 
     L, t = [], 1
 
@@ -60,7 +61,7 @@ def dlp_bsgs(p,g,h):
 p = 11251
 g = 11089
 x = 1
-h = 6320
+h = 3742
 
 print ("[Problem] {}^x = {} over GF({})".format(g, h, p)) 
 dlp_bsgs(p, g, h)

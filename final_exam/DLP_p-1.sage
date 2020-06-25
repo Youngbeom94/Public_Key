@@ -1,8 +1,8 @@
 reset() 
+#load("DLP_p-1.sage")
 # parameter 
 p = random_prime(2^12) 
 F = GF(p)
-
 while True:
     g = F.random_element() 
     if g == 0:
@@ -13,6 +13,10 @@ while True:
 
 x = ZZ.random_element(2, p)
 
+p = 4021
+g = 2160
+x = 1
+h = 2160
 # problem: g^x = h 
 h = power_mod(g,x,p) 
 print ("[Problem] {}^x = {} over GF({}) : {}^{} = 1".format(g, h, p, g, n))
