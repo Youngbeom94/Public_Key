@@ -3,6 +3,7 @@ reset()
 # parameter 
 p = 383
 F = GF(p)
+#test
 while True:
     g = F.random_element() 
     if g == 0:
