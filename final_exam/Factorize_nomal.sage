@@ -11,6 +11,7 @@ def factorize(N, B):
     return "Failure\n"
 
 upper_bound = 2^15
+//
 B = 10000
 
 cnt = 10 
